@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change</title>
+</head>
+
+    <!-- =======================       CSS      ======================================= -->
+    
+    <style>
+        body{
+            margin: auto;
+            padding: 0px 100px;
+        }
+        h1{
+            text-align: center;
+            margin: 50px;
+            text-decoration: underline;
+            color: red;
+        }
+        img{
+            width: 100%;
+        }
+        p, li{
+            text-align: justify;
+            font-size: 20px;
+        }
+        .color{
+            text-align: right;
+            padding: 10px;
+        }
+        .btn{
+            
+            display: inline-block;
+            border: 1px solid red;
+            width: 35px;
+            height: 35px;
+            border-radius: 30%;
+            margin: 5px;
+            cursor: pointer;
+
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #black{
+            background-color: black;
+        }
+    </style>
+
+<body>
+
+    <!-- ====================     Html    ==================================== -->
+
+    <h1>About Us</h1>
+    <div class="color">
+        <span class="btn" id="white" onclick="bgcolor('white')"></span>
+        <span class="btn" id="aqua" onclick="bgcolor('aqua')"></span>
+        <span class="btn" id="pink" onclick="bgcolor('pink')"></span>
+        <span class="btn" id="black" onclick="bgcolor('black')"></span>
+    </div>
+    <img src="2.png" alt="">
+    <h1>Other Information</h1>
+    <p class="clr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi consequatur nulla tempora explicabo
+        rerum voluptates placeat laboriosam, qui fugit nam amet accusamus quod obcaecati fugiat molestiae quae labore
+        natus pariatur accusantium! Earum repudiandae omnis animi ipsa amet necessitatibus quod, molestias voluptas
+        natus placeat reprehenderit quisquam minima alias mollitia eius delectus, praesentium laudantium aperiam unde
+        fugiat temporibus soluta iusto consequatur. Culpa sed vitae distinctio! Error, odit ea quam velit officiis
+        reprehenderit saepe pariatur animi, dolore illum consectetur optio, laborum eaque? Eaque omnis harum ipsam ad
+        earum cumque hic fugiat repudiandae rem voluptatem nam nulla totam eos fuga, odit sit ipsum? Recusandae nobis
+        rerum, voluptatem molestiae dolorem sunt ab architecto hic explicabo quia eaque magnam aliquid odit, ad nesciunt
+        dolore. Eligendi ut et error! Illo, pariatur excepturi? Voluptatibus quisquam earum explicabo dolorum obcaecati
+        tempore, voluptates ratione delectus labore alias dolor officiis ipsam dicta aut perspiciatis odio quas sunt
+        fugit distinctio pariatur quis cupiditate. Beatae at, unde ad porro sequi dignissimos id quaerat maxime nemo
+        doloremque magnam perspiciatis quo quae consectetur non sed distinctio repudiandae soluta harum vitae magni
+        officia minima reiciendis. Id aspernatur atque voluptates consectetur iure magnam nihil. Quidem maiores ipsa
+        unde harum vel magnam sunt quo quae eaque nihil, voluptates error, exercitationem quaerat maxime beatae natus!
+        Cum quis, praesentium nesciunt aut inventore laboriosam dignissimos? In dolorem blanditiis rerum culpa
+        voluptatum, odit error voluptatem. Doloribus repellendus, natus quam neque blanditiis eos sed eveniet eaque ut,
+        id suscipit ad, nisi rerum sit nostrum similique nesciunt! In non deserunt, quidem, necessitatibus voluptatibus
+        minima aut praesentium quibusdam, sint vitae error. Tempora earum cupiditate qui, culpa ipsa harum mollitia nam,
+        dolores eveniet delectus vel porro temporibus veritatis, expedita enim veniam explicabo perspiciatis aliquid.
+        Atque nulla sapiente sequi repellat. Id dolor delectus, cumque impedit explicabo necessitatibus, eius aliquam
+        magnam omnis quo et quidem fugiat repellat, officiis expedita exercitationem libero. Nulla natus nemo maxime
+        </p>
+            <h1>Our Spacifications</h1>
+        <ul class="clr">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ipsa.</li>
+        </ul>
+
+    <!-- ====================    Javascript      ============================= -->
+
+        <script>
+            function bgcolor(elm){
+            
+                document.body.style.backgroundColor = elm;
+                let text = document.getElementsByClassName("clr");
+
+                if(elm == 'black'){
+                    for(let css of text){
+                        css.style.color = 'white';
+                      }
+                    }else{
+                        for(let css of text){
+                        css.style.color = 'black';
+                        }
+                    }
+            }
+        </script>
+
+</body>
+
+</html>

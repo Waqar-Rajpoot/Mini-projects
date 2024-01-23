@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: darkslategrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      margin-top: 20px;
+    }
+    .container {
+        padding: 60px;
+        background-color: gray;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    .container:hover{
+        box-shadow: 0 0 100px  aqua;
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    label {
+      font-size: xx-large;
+      color: white;
+    }
+    #clock {
+      padding: 10px 18px;
+      background-color: yellow;
+      border-radius: 8px;
+      color: rgb(236, 9, 9);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="center">
+        <label for="">your local Time</label><br />
+        <label for="" id="clock"></label>
+      </div>
+    </div>
+    <script>
+      let clock = document.getElementById("clock");
+
+      setInterval(() => {
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        clock.innerHTML = time;
+      }, 1000);
+    </script>
+  </body>
+</html>

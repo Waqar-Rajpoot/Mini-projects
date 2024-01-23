@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+
+
+    <!-- =======================     CSS      ======================================= -->
+
+
+    <style>
+        body{
+            padding: 30px 100px;
+            background-color: bisque;
+            margin-top: 70px;
+        }
+        .container{
+            background-color: aqua;
+            text-align: center;
+            padding: 50px;
+        }
+        h1{
+            text-align: center;
+            color: green;
+            font-size: 45px;
+        }
+        .input-div{
+            display: inline-block;
+            margin: 0px 20px;
+        }
+        .inp{
+            padding: 5px 10px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 250px;
+            text-align: center;
+            color: red;
+            margin-top: 10px;
+        }
+        label{
+            font-size: 28px;
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- ====================     Html    ==================================== -->
+
+    
+    <h1>Temperature Converter</h1>
+    <div class="container">
+
+        <div class="input-div">
+            <label>Celcius</label><br>
+            <input type="number" id="cel" class="inp" value="0"> 
+        </div>
+
+        <div class="input-div">
+            <label>Fahrenheit</label><br>
+            <input type="number" id="fah" class="inp" value="32">
+        </div>
+
+        <div class="input-div">
+            <label>Kelvin</label><br>
+            <input type="number" id="kal" class="inp" value="273.15">
+         </div>
+
+    </div>
+
+
+    <!-- ====================    Javascript   =============================== -->
+
+
+    <script>
+
+        let cel = document.getElementById("cel");
+        let fah = document.getElementById("fah");
+        let kal = document.getElementById("kal");
+
+
+        cel.addEventListener('input', function(){
+            let c = this.value;
+
+            let f = (c * 9/5) + 32;
+            if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+            }
+            fah.value = f;
+
+            let k = c + 273.15;
+            if(!Number.isInteger(k)){
+                k = k.toFixed(4);
+            }
+            kal.value = k;
+
+        });
+        fah.addEventListener('input', function(){
+            let f = this.value;
+            let c = (f - 32) * 5/9;
+            if(!Number.isInteger(c)){
+                c = c.toFixed(4);
+            }
+            cel.value = c;
+
+            let k = (f - 32) * 5/9 + 273.15;
+            if(!Number.isInteger(k)){
+                k = k.toFixed(4);
+            }
+            kal.value = k;
+        });
+        kal.addEventListener('input', function(){
+            let k = this.value;
+            let c = k - 273.15;
+            if(!Number.isInteger(c)){
+                c = c.toFixed(4);
+            }
+            cel.value = c;
+
+            let f = (k - 273.15) * 9/5 + 32;
+            if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+            }
+            fah.value = f;
+        });
+
+    </script>
+</body>
+
+</html>

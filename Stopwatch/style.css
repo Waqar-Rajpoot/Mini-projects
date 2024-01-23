@@ -1,0 +1,51 @@
+body{
+    background-color: darkslategrey;
+}
+h1{
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    color: pink;
+}
+.digit{
+    font-size: 150px;
+    font-weight: bold;
+    color: white;
+}
+.txt{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;    
+}
+.btn-container{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.btn{
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: auto 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+#start{
+    background-color: darkolivegreen;
+}
+#stop{
+    background-color: darkorchid;
+}
+#reset{
+    background-color: darkred;
+}
+

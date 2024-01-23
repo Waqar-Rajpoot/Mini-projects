@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <style>
+      body {
+        background-color: dimgray;
+        height: 80vh;
+      }
+      .container {
+        height: 80%;
+      }
+      form {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #result {
+        font-size: xx-large;
+      }
+      h1 {
+        color: aqua;
+        text-align: center;
+        font-size: 60px;
+      }
+      #btn {
+        font-size: large;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background-color: lightblue;
+      }
+      input {
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        width: 250px;
+      }
+      label {
+        font-size: larger;
+        font-weight: bold;
+        color: aliceblue;
+      }
+      #result {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form action="">
+        <div>
+          <label for="weight">Weight in KG:</label>
+          <input type="number" name="" id="weight" />
+        </div>
+        <br />
+        <div>
+          <label for="height">Height in CM:</label>
+          <input type="number" name="" id="height" />
+        </div>
+        <br />
+        <button id="btn">Calculate</button><br />
+        <label for="" id="result" style="color: black"></label>
+      </form>
+      <script src="project_2.js"></script>
+
+      <div style="text-align: center; margin-top: 30px; color: white">
+        <h2>BMI Weight guide:</h2>
+        <p>Under weight = Less than 18.6</p>
+        <p>Normal weight = 18.6 to 24.6</p>
+        <p>Over weight = Greater than 24.6</p>
+        <label for="" id="conclusion" style="color: black"></label>
+      </div>
+    </div>
+  </body>
+</html>
